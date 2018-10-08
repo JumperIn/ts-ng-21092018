@@ -5,8 +5,8 @@
  */
 function isInArray<T>(source: T[], ...other: T[]): boolean {
     const hasInArray = other.every(value =>
-        source.indexOf(value) !== -1);
-
+        source.includes(value)
+    )
     return hasInArray;
 }
 
@@ -41,7 +41,7 @@ function summator(...array: StringOrNumber[]): StringOrNumber {
     const initialValue = typeof array[0] === 'string'
         ? ''
         : 0;
-    const result = array.reduce(function (sum, currentValue): StringOrNumber {
+    const result = array.reduce((sum, currentValue): StringOrNumber => {
         return add(sum, currentValue);
     }, initialValue);
 
@@ -77,7 +77,7 @@ function getUnique<T>(...array: T[]): T[] {
     const newArray: T[] = [];
 
     for (let i = 0; i < array.length; i++) {
-        if (newArray.indexOf(array[i]) === -1) {
+        if (!newArray.includes(array[i])) {
             newArray.push(array[i]);
         }
     }
