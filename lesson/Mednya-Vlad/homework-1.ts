@@ -6,7 +6,7 @@
 function isInArray<T>(source: T[], ...other: T[]): boolean {
     const hasInArray = other.every(value =>
         source.includes(value)
-    )
+    );
     return hasInArray;
 }
 
