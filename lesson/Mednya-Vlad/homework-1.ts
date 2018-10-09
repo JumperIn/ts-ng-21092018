@@ -3,7 +3,7 @@
  * @param source Исходный массив.
  * @param other Остальные аргументы, которые проверяем.
  */
-function isInArray<T>(source: T[], ...other: T[]): boolean {
+export function isInArray<T>(source: T[], ...other: T[]): boolean {
     const hasInArray = other.every(value =>
         source.includes(value)
     );
@@ -31,13 +31,13 @@ type StringOrNumber = string | number;
  * Возвращает склеенную строку.
  * @param array Массив строк.
  */
-function summator(...array: string[]): string;
+export function summator(...array: string[]): string;
 /**
  * Возвращает сумму чисел.
  * @param array Массив чисел.
  */
-function summator(...array: number[]): number;
-function summator(...array: StringOrNumber[]): StringOrNumber {
+export function summator(...array: number[]): number;
+export function summator(...array: StringOrNumber[]): StringOrNumber {
     const initialValue = typeof array[0] === 'string'
         ? ''
         : 0;
@@ -73,7 +73,7 @@ function checkSummator(): void {
  * Возвращает массив, состоящий из уникальных элементов массива array.
  * @param array Массив значений.
  */
-function getUnique<T>(...array: T[]): T[] {
+export function getUnique<T>(...array: T[]): T[] {
     const newArray: T[] = [];
 
     for (let i = 0; i < array.length; i++) {
@@ -111,7 +111,7 @@ function checkGetUnique(): void {
  // => [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
  ```
  */
-function toMatrix<T>(data: T[], rowSize: number): T[][] {
+export function toMatrix<T>(data: T[], rowSize: number): T[][] {
     const matrixOutput: T[][] = [];
     const rowNumber: number = Math.ceil(data.length / rowSize);
 
