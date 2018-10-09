@@ -3,9 +3,6 @@ import { summator } from './homework-1';
 import { getUnique } from './homework-1';
 import { toMatrix } from './homework-1';
 
-import {} from 'jasmine';
-
-
 describe('test functions ', () => {
     it('isInArray should work', () => {
         const source = [1, 2, 3, 4, 5, 'a', 'b', 'c'];
@@ -14,11 +11,11 @@ describe('test functions ', () => {
 
         const result1 = isInArray(source, ...other1);
         expect(result1)
-            .toBeTruthy();
+            .toBe(true);
 
         const result2 = isInArray(source, ...other2);
         expect(result1)
-            .toBeFalsy();
+            .toBe(false);
     });
 });
 
