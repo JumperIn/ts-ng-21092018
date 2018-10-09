@@ -3,7 +3,7 @@ import { summator } from './homework-1';
 import { getUnique } from './homework-1';
 import { toMatrix } from './homework-1';
 
-import {} from 'jasmine'
+import {} from 'jasmine';
 
 
 describe('test functions ', () => {
