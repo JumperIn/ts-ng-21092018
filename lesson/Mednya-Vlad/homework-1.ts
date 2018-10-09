@@ -144,3 +144,4 @@ checkToMatrix();
 
 // Из папки Mednya-Vlad запуск компилятора ./../../node_modules/.bin/tsc
 // Из той же папки запуск консоли ./../../node_modules/.bin/ts-node homework-1.ts
+// Запуск тестов из корневой (ts-ng) ./node_modules/.bin/karma start ./lesson/Mednya-Vlad/karma.conf.js
